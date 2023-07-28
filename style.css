@@ -1,0 +1,103 @@
+body {
+  opacity:1;
+  display:flex;
+  background-image: url(.jpg);
+  background-size: 160%;
+  background-color: rgb(14, 4, 37,0.7);
+}
+
+input {
+  border: 2px solid rgb(248, 202, 207);
+  margin-left:;
+  margin-left: 10%;
+  margin-top: 1%;
+  padding: 1%;
+  height: 25%;
+  width: 80%;
+  border-radius: 10px;
+  background-color: rgb(219, 210, 247);
+  font-family:'Trebuchet MS', sans-serif;
+  color: rgb(29, 2, 55);
+  font-size:20px;
+}
+
+.parrent {
+  opacity: 1;
+  box-shadow: 2px 2px 22px 15px rgb(248, 202, 207);
+  padding-top: 100px;
+  display: flex;
+  position: relative;
+  width: auto;
+  vertical-align: middle;
+  height: 800px;
+  background-image: url(11a.jpg);
+  background-size:100%;
+  background-color: rgb(57, 49, 83);
+  border-radius: 100px;
+  border:2px solid rgb(248, 203, 207) ;
+}
+
+.child {
+  opacity:0.9 ;
+  border: 1px solid rgb(258, 202, 207);
+  box-shadow: 1px 1px 33px 1px rgb(248, 202, 207);
+  padding-top: 120px;
+  background-color: rgb(117, 151, 186);
+  background-image: url(13.jpg);
+  background-size: 200%;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: ;
+  border-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  position:relative;
+  vertical-align: middle;
+  padding: 10%;
+}
+
+.form {
+  border: 1px solid rgb(248, 202, 307);
+  box-shadow: 1px 1px 33px 1px rgb(248, 202, 207);
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  height: 120px;
+  border-radius: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image:url(11a.jpg);
+  background-size: 100%;
+  background-color: rgb(94, 132, 167);
+  vertical-align: middle;
+}
+.in2{
+  display: flex
+  width: ;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+img{
+  borde: 1px solid rgb(248, 202, 207);
+  border-radius: 25px;
+  bo-shadow: 2px 2px 43px 11px rgb(248, 202, 207);
+  max-width:75%;
+  height: auto;
+  display:flex;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 90px;
+}
+.push1{
+  border-radius:50px 0px 0px 40px;
+  border: 1px solid rgb(248, 202, 207);
+  box-shadow: 1px 1px 33px 1px rgb(248, 202, 207);
+}
+.push2{
+  border-radius:0px 50px 40px 0px;
+  border: 1px solid rgb(248, 202, 207);
+  box-shadow: 1px 1px 33px 1px rgb(248, 202, 207);
+}

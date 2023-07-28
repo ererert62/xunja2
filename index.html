@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ксюня</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css">
+    <style>
+        .xun {
+
+            margin-left: ;
+            width: 100%;
+            height: 100%;
+            padding: ;
+            margin-top: -22%;
+        }
+
+        .form {
+            padding: 2%;
+            margin-left: -2%;
+        }
+
+        .button {
+            padding: ;
+            margin: 10px 0 0 -5px;
+            border: 2px solid rgb(248, 202, 207);
+            border-radius: 10px;
+            background-color: rgb(186, 182, 230);
+            width: 50%;
+            height: 50px;
+            margin-right: 50%;
+            margin-left: 26%;
+            text-shadow: 1px 1px 1px #34060c;
+            font-size: 20px;
+            color: rgb(108, 81, 120);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .img {
+            margin-top: -140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        img {
+            display: flex;
+            height: 70px;
+            padding: 10px;
+            padding-top: 20px;
+            borde: 2px solid rgb(248, 202, 207);
+            bo-shadow: 1px 1px 33px 1px rgb(248, 202, 207);
+        }
+
+        .xunja {
+            box-shadow: 1px 1px 33px 1px rgb(248, 202, 207);
+            border: 1px solid rgb(248, 202, 207);
+            max-width: 75%;
+            height: auto;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 90px;
+        }
+
+        .parrent {
+            opacity: ;
+            flex-direction: column;
+            padding: %;
+        }
+
+        .child {
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parrent">
+        <div style="opacity: 1;" class="img">
+            <a href="Photos.html"> <img class="push1" src="22.png" width="200px" height="70px"></a>
+            <a href="Advanced.html"><img class="push2" src="33.png" width="200px" height="70px"></a>
+        </div>
+        <div class="child">
+
+            <div class="form">
+                <form action="https://google.com/search">
+                    <div style="opacity: 0.6;" class="in1">
+                        <input type="text" name="q">
+                    </div>
+                    <div style="opacity: 0.7;" class="in2">
+                        <button class="button" type="submit" value="Ксюня найдёт">Ксюня найдет</button>
+                    </div>
+                </form>
+            </div>
+            <div class="xu">
+                <p>
+                    <img class="xunja" style="opacity: 1;" src="9.png">
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function askQuestion() {
+            const questions = [
+                {
+                    question: "Так вот, как меня зовут?",
+                    answer: "Дима",
+                },
+                {
+                    question: "Как я называю тебя?",
+                    answer: "Ксюня",
+                },
+                {
+                    question: "Любовь и дружба совместимы?",
+                    answer: "Да",
+                },
+                {
+                    question: "Ты согласна стать моей женой ?",
+                    answer: "Да",
+                },
+                {
+                    question: "У нас будет брачная ночь ,или день ?",
+                    answer: "День",
+                },
+                {
+                    question: "Напиши один правильный ответ. Мне надо выполнить - Миссию, Задачу, Разведку или Селекцию ? ",
+                    answer: "Миссию",
+                },
+                {
+                    question: "Расставь правильную очередность цифрами 1. Мытся.2.Целоваться.3.Обниматься.4.Получать витаминки.5.Массаж.",
+                    answer: "32415",
+                },
+                // Добавьте другие вопросы и ответы по аналогии
+            ];
+
+            function ask(index) {
+                if (index >= questions.length) {
+                    // Если все вопросы заданы, показываем сообщение об успешном завершении
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Умница !',
+                        text: 'Ты самая лучшая, я люблю тебя Ксюня 🌹',
+                    });
+                    return;
+                }
+
+                const question = questions[index].question;
+                const correctAnswer = questions[index].answer;
+
+                Swal.fire({
+                    position: 'top',
+                    title: question,
+                    input: 'text',
+                    icon: 'question',
+                    allowOutsideClick: false,
+                    allowEscapeKey:false,
+                    showCancelButton: false,
+                    confirmButtonText: 'Проверить',
+                    showLoaderOnConfirm: true,
+                    color: '#716add',
+                    backdrop: `
+                    rgba(0,0,123,0.4)
+                    url("9.gif")
+                     `,
+                    preConfirm: (userInput) => {
+                        if (userInput !== correctAnswer) {
+                            Swal.showValidationMessage('Неправильно,подсказка - пиши с большой буквы');
+                        }
+                    }
+
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Если ответ правильный, запускаем следующий вопрос рекурсивно
+                        ask(index + 1);
+                    }
+                });
+            }
+
+            ask(0); // Начинаем с первого вопроса
+        }
+
+        askQuestion();
+    </script>
+</body>
+
+</html>
